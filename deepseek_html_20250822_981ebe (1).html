@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Harassment Help Center - Support for Victims of Bank & NBFC Harassment</title>
+    <meta name="description" content="Get free support and resources to fight recovery harassment from banks and NBFCs. Learn your rights, access email templates, and join our victim support community.">
+    <meta name="keywords" content="recovery harassment, bank harassment, NBFC harassment, debt collection harassment, borrower rights, RBI guidelines, stop recovery agents, mental health debt">
+    <meta name="author" content="Recovery Harassment Help Center">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recoveryharassment.org/">
+    <meta property="og:title" content="Recovery Harassment Help Center - Support for Victims">
+    <meta property="og:description" content="Get free support and resources to fight recovery harassment from banks and NBFCs. Learn your rights and join our community.">
+    <meta property="og:image" content="https://recoveryharassment.org/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://recoveryharassment.org/">
+    <meta property="twitter:title" content="Recovery Harassment Help Center - Support for Victims">
+    <meta property="twitter:description" content="Get free support and resources to fight recovery harassment from banks and NBFCs. Learn your rights and join our community.">
+    <meta property="twitter:image" content="https://recoveryharassment.org/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://recoveryharassment.org/">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "name": "Recovery Harassment Help Center",
+      "url": "https://recoveryharassment.org/",
+      "logo": "https://recoveryharassment.org/images/logo.png",
+      "description": "A community-driven initiative to support victims of recovery harassment by banks and NBFCs.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "India"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "A victim of recovery harassment"
+      }
+    }
+    </script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-dark: #343a40;
+            --text-light: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-top: 80px;
+        }
+        
+        .hindi {
+            font-family: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(58, 110, 165, 0.9), rgba(58, 110, 165, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233a6ea5" opacity="0.2"/><path d="M0 0L100 100" stroke="white" stroke-width="2" opacity="0.1"/><path d="M100 0L0 100" stroke="white" stroke-width="2" opacity="0.1"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .email-help-section {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: var(--primary-color);
+        }
+        
+        .language-switcher {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+        
+        .language-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c5282;
+            border-color: #2c5282;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .rights-section {
+            background-color: #e9ecef;
+            padding: 80px 0;
+        }
+        
+        .rights-card {
+            border-left: 4px solid var(--primary-color);
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .donation-callout {
+            background: linear-gradient(135deg, #3a6ea5 0%, #2c5282 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .template-box {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .template-preview {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .about-section {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f9fa"/><path d="M0 0L100 100" stroke="%23e9ecef" stroke-width="2"/><path d="M100 0L0 100" stroke="%23e9ecef" stroke-width="2"/></svg>');
+            padding: 80px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+        
+        .pricing-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+        
+        .section-container {
+            min-height: 60vh;
+            padding: 80px 0;
+        }
+        
+        .placeholder-content {
+            background: white;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        .placeholder-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            .hero-section {
+                padding: 60px 0;
+                text-align: center;
+            }
+            
+            .section-title::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .donation-callout {
+                padding: 25px;
+            }
+            
+            .btn-primary, .btn-outline-primary {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .btn-group .btn {
+                width: auto;
+            }
+            
+            .navbar-nav {
+                text-align: center;
+            }
+            
+            .language-switcher {
+                margin: 5px;
+            }
+            
+            .display-4 {
+                font-size: 2.2rem;
+            }
+            
+            .display-5 {
+                font-size: 1.8rem;
+            }
+            
+            .template-box {
+                padding: 15px;
+            }
+        }
+        
+        /* Accessibility Improvements */
+        a:focus, button:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* High contrast support */
+        @media (prefers-contrast: high) {
+            :root {
+                --primary-color: #000080;
+                --text-dark: #000000;
+            }
+            
+            .service-card, .blog-card {
+                border: 2px solid var(--text-dark);
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .navbar, .btn, .language-switcher, .donation-callout {
+                display: none !important;
+            }
+            
+            body {
+                color: black;
+                background: white;
+            }
+            
+            a {
+                color: black;
+                text-decoration: underline;
+            }
+            
+            .hero-section {
+                background: white !important;
+                color: black;
+                padding: 20px 0;
+            }
+        }
+    </style>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Recovery Harassment Help</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rights">Your Rights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#templates">Email Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">My Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">Support Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <span class="language-switcher language-active">EN</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="language-switcher hindi">हिंदी</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Fighting Recovery Harassment Together</h1>
+                    <p class="lead">We provide support, guidance, and resources to victims of aggressive recovery practices by banks and NBFCs.</p>
+                    <p class="hindi mt-3" style="display: none;">हम बैंकों और एनबीएफसी द्वारा आक्रामक वसूली प्रथाओं के शिकार लोगों को सहायता, मार्गदर्शन और संसाधन प्रदान करते हैं।</p>
+                    <div class="disclaimer">
+                        <strong>Disclaimer:</strong> I am not a legal professional but a victim of harassment like you. This initiative runs on a donation model to help maximum people.
+                    </div>
+                    <div class="mt-4">
+                        <a href="#services" class="btn btn-light btn-lg me-2">How We Help</a>
+                        <a href="#templates" class="btn btn-outline-light btn-lg">Email Templates</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='350' viewBox='0 0 500 350'><rect width='500' height='350' fill='%23ffffff' opacity='0.2' rx='20' ry='20'/><circle cx='250' cy='150' r='80' fill='%23ffffff' opacity='0.4'/><path d='M200 250 L300 250 L250 300 Z' fill='%23ffffff' opacity='0.4'/></svg>" alt="Support Community for Recovery Harassment Victims" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-container">
+        <div class="container">
+            <h2 class="section-title text-center">How We Can Help</h2>
+            <p class="text-center mb-5">We offer various services to support victims of recovery harassment. All our services are free of charge, as we operate on a donation-based model.</p>
+            
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-hands-helping" aria-hidden="true"></i>
+                            </div>
+                            <h3>Guidance & Support</h3>
+                            <p>Step-by-step guidance on how to deal with harassment from recovery agents.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <h3>Email Templates</h3>
+                            <p>Ready-to-use email templates to communicate with banks and regulatory authorities.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-balance-scale" aria-hidden="true"></i>
+                            </div>
+                            <h3>Legal Rights Information</h3>
+                            <p>Understand your legal rights and the limitations of recovery agents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="donation-callout text-center">
+                <h3>Support Our Mission</h3>
+                <p>We are victims helping victims. This initiative runs entirely on donations to help as many people as possible.</p>
+                <p>Your contributions help us maintain this platform, reach more people, and connect with qualified legal professionals.</p>
+                <a href="#support" class="btn btn-light btn-lg mt-3">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section-container bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Latest from Our Blog</h2>
+            <p class="text-center mb-5">Educational articles and resources to help you understand and fight recovery harassment</p>
+            
+            <div class="alert alert-info">
+                <strong>Note:</strong> Our blog content is written from personal experience as victims of recovery harassment. 
+                We encourage you to verify any information with qualified legal professionals before taking action.
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%233a6ea5'/><circle cx='200' cy='100' r='50' fill='%23ffffff' opacity='0.6'/></svg>" class="card-img-top" alt="Know Your Rights Against Recovery Agents">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1" aria-hidden="true"></i> October 15, 2023</span>
+                            <h3 class="card-title h5 mt-2">Know Your Rights Against Recovery Agents</h3>
+                            <p class="card-text">Understanding what recovery agents can and cannot do when collecting debts.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23ff6b6b'/><rect x='150' y='75' width='100' height='50' fill='%23ffffff' opacity='0.6'/></svg>" class="card-img-top" alt="How to Document Harassment Incidents">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1" aria-hidden="true"></i> October 8, 2023</span>
+                            <h3 class="card-title h5 mt-2">How to Document Harassment Incidents</h3>
+                            <p class="card-text">A step-by-step guide to properly document recovery harassment for legal purposes.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23f8f9fa'/><path d='M100 100 L300 100 L200 50 Z' fill='%233a6ea5' opacity='0.6'/></svg>" class="card-img-top" alt="Effective Communication with Banks">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1" aria-hidden="true"></i> October 1, 2023</span>
+                            <h3 class="card-title h5 mt-2">Effective Communication with Banks</h3>
+                            <p class="card-text">Learn how to professionally communicate with banks to resolve issues without harassment.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="section-container">
+        <div class="container">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <p class="text-center mb-5">Reach out to us for support or questions about recovery harassment</p>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="mb-4">Get in Touch</h3>
+                            
+                            <ul class="contact-info">
+                                <li>
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <span>help@recoveryharassment.org</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <span>+91 XXXXXXXXXX</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                    <span>Based in India, helping victims nationwide</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <span>Response within 24-48 hours</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="mb-4">Support Our Mission</h3>
+                            <p>We operate on a donation-based model to help as many victims as possible. Your support helps us:</p>
+                            
+                            <ul>
+                                <li>Maintain and improve our platform</li>
+                                <li>Reach more victims of recovery harassment</li>
+                                <li>Rope in qualified legal professionals</li>
+                                <li>Create more educational resources</li>
+                            </ul>
+                            
+                            <div class="mt-4">
+                                <a href="#" class="btn btn-primary me-2">Make a Donation</a>
+                                <a href="#" class="btn btn-outline-primary">Volunteer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3>Recovery Harassment Help Center</h3>
+                    <p>A community-driven initiative to support victims of recovery harassment by banks and NBFCs.</p>
+                    <p>Not affiliated with any financial institution.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#rights">Your Rights</a></li>
+                        <li><a href="#templates">Email Templates</a></li>
+                        <li><a href="#about">My Story</a></li>
+                        <li><a href="#support">Support Us</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Legal Rights</a></li>
+                        <li><a href="#">Email Templates</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Regulatory Bodies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h4>Legal Disclaimer</h4>
+                    <p>We are not legal professionals. The information provided here is for educational purposes only and does not constitute legal advice.</p>
+                    <p>We are victims helping other victims through shared experiences.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2023 Recovery Harassment Help Center. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Made with ❤️ for victims of recovery harassment</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hindiElements = document.querySelectorAll('.hindi');
+            const enButton = document.querySelector('.language-switcher:not(.hindi)');
+            const hindiButton = document.querySelector('.language-switcher.hindi');
+            
+            function switchToEnglish() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                enButton.classList.add('language-active');
+                hindiButton.classList.remove('language-active');
+            }
+            
+            function switchToHindi() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'block';
+                });
+                enButton.classList.remove('language-active');
+                hindiButton.classList.add('language-active');
+            }
+            
+            enButton.addEventListener('click', switchToEnglish);
+            hindiButton.addEventListener('click', switchToHindi);
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a.nav-link').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    document.querySelectorAll('a.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Update active link on scroll
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('.section-container, .hero-section, .rights-section, .about-section');
+                const navLinks = document.querySelectorAll('a.nav-link');
+                
+                let currentSection = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (window.scrollY >= sectionTop - 100) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + currentSection) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // Google Analytics event tracking
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.hostname !== window.location.hostname) {
+                        gtag('event', 'outbound_click', {
+                            'event_category': 'Outbound',
+                            'event_label': this.href,
+                            'transport_type': 'beacon'
+                        });
+                    }
+                });
+            });
+            
+            // Track form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function() {
+                    gtag('event', 'form_submit', {
+                        'event_category': 'Forms',
+                        'event_label': this.id || 'unknown_form'
+                    });
+                });
+            });
+            
+            // Track donation button clicks
+            document.querySelectorAll('.btn-primary, .btn-light').forEach(button => {
+                if (button.textContent.toLowerCase().includes('donation')) {
+                    button.addEventListener('click', function() {
+                        gtag('event', 'donation_click', {
+                            'event_category': 'Donations',
+                            'event_label': 'Donation Button Clicked'
+                        });
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Harassment Help Center - Support for Victims</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-dark: #343a40;
+            --text-light: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .hindi {
+            font-family: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(58, 110, 165, 0.9), rgba(58, 110, 165, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233a6ea5" opacity="0.2"/><path d="M0 0L100 100" stroke="white" stroke-width="2" opacity="0.1"/><path d="M100 0L0 100" stroke="white" stroke-width="2" opacity="0.1"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-top: 56px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .email-help-section {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: var(--primary-color);
+        }
+        
+        .language-switcher {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+        
+        .language-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c5282;
+            border-color: #2c5282;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .rights-section {
+            background-color: #e9ecef;
+            padding: 80px 0;
+        }
+        
+        .rights-card {
+            border-left: 4px solid var(--primary-color);
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .donation-callout {
+            background: linear-gradient(135deg, #3a6ea5 0%, #2c5282 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .template-box {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        
+        .template-preview {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .about-section {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f8f9fa"/><path d="M0 0L100 100" stroke="%23e9ecef" stroke-width="2"/><path d="M100 0L0 100" stroke="%23e9ecef" stroke-width="2"/></svg>');
+            padding: 80px 0;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+            margin: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--primary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+        }
+        
+        .pricing-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            height: 100%;
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            border: 2px solid var(--primary-color);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 1rem 0;
+        }
+        
+        .price-type {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2rem 0;
+        }
+        
+        .pricing-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Recovery Harassment Help</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#rights">Your Rights</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#templates">Email Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">My Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#support">Support Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <span class="language-switcher language-active">EN</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="language-switcher hindi">हिंदी</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Fighting Recovery Harassment Together</h1>
+                    <p class="lead">We provide support, guidance, and resources to victims of aggressive recovery practices by banks and NBFCs.</p>
+                    <p class="hindi mt-3" style="display: none;">हम बैंकों और एनबीएफसी द्वारा आक्रामक वसूली प्रथाओं के शिकार लोगों को सहायता, मार्गदर्शन और संसाधन प्रदान करते हैं।</p>
+                    <div class="disclaimer">
+                        <strong>Disclaimer:</strong> I am not a legal professional but a victim of harassment like you. This initiative runs on a donation model to help maximum people.
+                    </div>
+                    <div class="mt-4">
+                        <a href="#services" class="btn btn-light btn-lg me-2">How We Help</a>
+                        <a href="#templates" class="btn btn-outline-light btn-lg">Email Templates</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='350' viewBox='0 0 500 350'><rect width='500' height='350' fill='%23ffffff' opacity='0.2' rx='20' ry='20'/><circle cx='250' cy='150' r='80' fill='%23ffffff' opacity='0.4'/><path d='M200 250 L300 250 L250 300 Z' fill='%23ffffff' opacity='0.4'/></svg>" alt="Support Community" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Template Generators Section -->
+    <section id="templates" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center">Email Template Generators</h2>
+            <p class="text-center mb-5">Use our customizable templates to communicate effectively with banks and recovery agencies</p>
+            
+            <div class="alert alert-info">
+                <strong>Note:</strong> These templates are based on our personal experiences as victims. They are not legal documents. 
+                We recommend customizing them to your specific situation.
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>Cease and Desist Notice</h4>
+                        <p>Formally request recovery agents to stop harassment</p>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="cdName" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Address</label>
+                            <textarea class="form-control" id="cdAddress" rows="2" placeholder="Enter your complete address"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Bank/NBFC Name</label>
+                            <input type="text" class="form-control" id="cdBank" placeholder="Name of the bank or financial institution">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Account/Loan Number</label>
+                            <input type="text" class="form-control" id="cdAccount" placeholder="Your account or loan number">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Harassment Details</label>
+                            <textarea class="form-control" id="cdDetails" rows="3" placeholder="Brief description of the harassment faced"></textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="generateCeaseDesist()">Generate Template</button>
+                        <button class="btn btn-outline-secondary ms-2" onclick="resetForm('ceaseDesist')">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>Generated Template</h4>
+                        <p>Copy and customize this template as needed</p>
+                        
+                        <div class="template-preview" id="ceaseDesistTemplate">
+                            Your generated template will appear here after filling the form.
+                        </div>
+                        
+                        <div class="mt-3 d-flex justify-content-between">
+                            <button class="btn btn-outline-primary" onclick="copyToClipboard('ceaseDesistTemplate')">
+                                <i class="fas fa-copy me-1"></i> Copy Template
+                            </button>
+                            <button class="btn btn-outline-success" onclick="downloadTemplate('ceaseDesistTemplate', 'Cease-Desist-Notice.txt')">
+                                <i class="fas fa-download me-1"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>Bank Complaint Letter</h4>
+                        <p>Formal complaint to bank management about recovery harassment</p>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="bcName" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Bank Branch Manager Name</label>
+                            <input type="text" class="form-control" id="bcManager" placeholder="Name of the branch manager">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Bank Name & Address</label>
+                            <textarea class="form-control" id="bcAddress" rows="2" placeholder="Bank branch address"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Account/Loan Number</label>
+                            <input type="text" class="form-control" id="bcAccount" placeholder="Your account or loan number">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Incident Details</label>
+                            <textarea class="form-control" id="bcIncident" rows="3" placeholder="Details of the harassment incident"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Date of Incident</label>
+                            <input type="date" class="form-control" id="bcDate">
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="generateBankComplaint()">Generate Template</button>
+                        <button class="btn btn-outline-secondary ms-2" onclick="resetForm('bankComplaint')">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>Generated Template</h4>
+                        <p>Copy and customize this template as needed</p>
+                        
+                        <div class="template-preview" id="bankComplaintTemplate">
+                            Your generated template will appear here after filling the form.
+                        </div>
+                        
+                        <div class="mt-3 d-flex justify-content-between">
+                            <button class="btn btn-outline-primary" onclick="copyToClipboard('bankComplaintTemplate')">
+                                <i class="fas fa-copy me-1"></i> Copy Template
+                            </button>
+                            <button class="btn btn-outline-success" onclick="downloadTemplate('bankComplaintTemplate', 'Bank-Complaint.txt')">
+                                <i class="fas fa-download me-1"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>RBI Banking Ombudsman Complaint</h4>
+                        <p>Formal complaint to the RBI Banking Ombudsman</p>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="rbiName" placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Your Contact Information</label>
+                            <textarea class="form-control" id="rbiContact" rows="2" placeholder="Your address, email, and phone number"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Bank Name & Branch</label>
+                            <input type="text" class="form-control" id="rbiBank" placeholder="Name of the bank and branch">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Previous Complaint Details</label>
+                            <textarea class="form-control" id="rbiPrevious" rows="2" placeholder="Details of any previous complaints to the bank"></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label">Harassment Summary</label>
+                            <textarea class="form-control" id="rbiSummary" rows="3" placeholder="Summary of the harassment faced"></textarea>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="generateRBIComplaint()">Generate Template</button>
+                        <button class="btn btn-outline-secondary ms-2" onclick="resetForm('rbiComplaint')">Reset</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="template-box">
+                        <h4>Generated Template</h4>
+                        <p>Copy and customize this template as needed</p>
+                        
+                        <div class="template-preview" id="rbiComplaintTemplate">
+                            Your generated template will appear here after filling the form.
+                        </div>
+                        
+                        <div class="mt-3 d-flex justify-content-between">
+                            <button class="btn btn-outline-primary" onclick="copyToClipboard('rbiComplaintTemplate')">
+                                <i class="fas fa-copy me-1"></i> Copy Template
+                            </button>
+                            <button class="btn btn-outline-success" onclick="downloadTemplate('rbiComplaintTemplate', 'RBI-Complaint.txt')">
+                                <i class="fas fa-download me-1"></i> Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Us / Pricing Section -->
+    <section id="support" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title text-center">Support Our Initiative</h2>
+            <p class="text-center mb-5">We operate on a donation model to help as many victims as possible. Your support makes this possible.</p>
+            
+            <div class="donation-callout text-center">
+                <h3>Important Notice About Our Services</h3>
+                <p><strong>All our services are completely free of charge.</strong> We are victims helping other victims.</p>
+                <p>However, maintaining this platform and connecting with qualified legal professionals requires resources.</p>
+                <p>Your donations help us continue this work and reach more people in need.</p>
+                <a href="#contact" class="btn btn-light btn-lg mt-3">Make a Donation</a>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Basic Support</h3>
+                        <div class="price-type">For those who need guidance</div>
+                        <div class="price">Free</div>
+                        <ul class="pricing-features">
+                            <li>Access to educational resources</li>
+                            <li>Basic email templates</li>
+                            <li>Community forum access</li>
+                            <li>Self-help guides</li>
+                            <li>Rights information</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-primary">Get Started</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="pricing-card featured">
+                        <h3>Personalized Help</h3>
+                        <div class="price-type">For those needing direct assistance</div>
+                        <div class="price">Free*</div>
+                        <ul class="pricing-features">
+                            <li>Everything in Basic Support</li>
+                            <li>Customized email assistance</li>
+                            <li>One-on-one guidance sessions</li>
+                            <li>Case documentation help</li>
+                            <li>Priority community support</li>
+                            <li>Resource customization</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary">Request Assistance</a>
+                        <p class="small mt-2">*We welcome donations to support this service</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h3>Legal Referral</h3>
+                        <div class="price-type">For complex cases</div>
+                        <div class="price">Free*</div>
+                        <ul class="pricing-features">
+                            <li>Everything in Personalized Help</li>
+                            <li>Connection to verified lawyers</li>
+                            <li>Case evaluation assistance</li>
+                            <li>Document preparation guidance</li>
+                            <li>Follow-up support</li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline-primary">Request Referral</a>
+                        <p class="small mt-2">*Legal professionals may charge fees for their services</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4>Where Your Donations Go</h4>
+                            <div class="row mt-4">
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-laptop"></i>
+                                    </div>
+                                    <h5>Platform Maintenance</h5>
+                                    <p>Website hosting, security, and updates</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-users"></i>
+                                    </div>
+                                    <h5>Outreach Programs</h5>
+                                    <p>Spreading awareness to help more victims</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-gavel"></i>
+                                    </div>
+                                    <h5>Legal Network</h5>
+                                    <p>Building relationships with qualified professionals</p>
+                                </div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary mt-4">Support Our Mission</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center">My Story: From Victim to Advocate</h2>
+            <p class="text-center mb-5">Understanding my journey and why I started this initiative</p>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">My Experience with Recovery Harassment</h4>
+                            <p class="card-text">
+                                Like many of you, I experienced firsthand the aggressive tactics used by some recovery agents 
+                                working on behalf of financial institutions. The constant calls, threatening language, and 
+                                complete disregard for my circumstances took a significant toll on my mental health and 
+                                overall well-being.
+                            </p>
+                            <p class="card-text">
+                                At my lowest point, I felt completely alone and powerless. The financial stress was compounded 
+                                by the emotional trauma of the harassment. I knew something had to change - not just for me, 
+                                but for the countless others facing similar situations.
+                            </p>
+                            <p class="card-text">
+                                Through extensive research and connecting with others, I learned about my rights and how to 
+                                effectively respond to unethical recovery practices. This knowledge empowered me to take 
+                                control of the situation and eventually stop the harassment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h4 class="card-title">Why I Started This Initiative</h4>
+                            <p class="card-text">
+                                After successfully navigating my own situation, I realized how many people were suffering 
+                                in silence without access to proper guidance or support. The complexity of banking regulations 
+                                and the intimidating nature of recovery agencies often leave victims feeling helpless.
+                            </p>
+                            <p class="card-text">
+                                I created this platform to provide what I wished I had during my most difficult times:
+                            </p>
+                            <ul>
+                                <li>Clear, accessible information about rights and protections</li>
+                                <li>Practical templates and tools for effective communication</li>
+                                <li>A supportive community of people who understand the experience</li>
+                                <li>Guidance from a perspective of lived experience, not just theoretical knowledge</li>
+                            </ul>
+                            <p class="card-text">
+                                This is not a business for me - it's a mission to help others regain their power and dignity 
+                                in the face of recovery harassment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">My Journey</h4>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <h5>Initial Harassment</h5>
+                                    <p class="text-muted">January 2021</p>
+                                    <p>Began experiencing aggressive recovery tactics after a temporary financial setback</p>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <h5>Research & Self-Education</h5>
+                                    <p class="text-muted">March 2021</p>
+                                    <p>Started researching rights, regulations, and effective response strategies</p>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <h5>Successful Resolution</h5>
+                                    <p class="text-muted">June 2021</p>
+                                    <p>Implemented strategies that successfully stopped the harassment in my case</p>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <h5>Helping Others</h5>
+                                    <p class="text-muted">August 2021</p>
+                                    <p>Began assisting friends and family members facing similar situations</p>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <h5>Platform Launch</h5>
+                                    <p class="text-muted">January 2022</p>
+                                    <p>Created this website to reach and help more people on a larger scale</p>
+                                </div>
+                                
+                                <div class="timeline-item">
+                                    <h5>Community Growth</h5>
+                                    <p class="text-muted">Present</p>
+                                    <p>Continuing to expand resources and build a network of support for victims</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <h4>My Approach & Philosophy</h4>
+                            <div class="row mt-4">
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                    <h5>Empathy First</h5>
+                                    <p>I understand what you're going through because I've been there myself</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h5>Empowerment</h5>
+                                    <p>My goal is to give you the knowledge and tools to advocate for yourself</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service-icon">
+                                        <i class="fas fa-hand-holding-heart"></i>
+                                    </div>
+                                    <h5>Community Support</h5>
+                                    <p>We're stronger together - sharing experiences and solutions</p>
+                                </div>
+                            </div>
+                            <div class="disclaimer mt-4">
+                                <strong>Important:</strong> While I share from experience, I always emphasize that I am not a legal professional. 
+                                For complex legal matters, I connect people with qualified lawyers who can provide proper legal counsel.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4>Recovery Harassment Help Center</h4>
+                    <p>A community-driven initiative to support victims of recovery harassment by banks and NBFCs.</p>
+                    <p>Not affiliated with any financial institution.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#templates">Email Templates</a></li>
+                        <li><a href="#about">My Story</a></li>
+                        <li><a href="#support">Support Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Legal Rights</a></li>
+                        <li><a href="#">Email Templates</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Regulatory Bodies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Legal Disclaimer</h5>
+                    <p>We are not legal professionals. The information provided here is for educational purposes only and does not constitute legal advice.</p>
+                    <p>We are victims helping other victims through shared experiences.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2023 Recovery Harassment Help Center. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Made with ❤️ for victims of recovery harassment</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hindiElements = document.querySelectorAll('.hindi');
+            const enButton = document.querySelector('.language-switcher:not(.hindi)');
+            const hindiButton = document.querySelector('.language-switcher.hindi');
+            
+            function switchToEnglish() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                enButton.classList.add('language-active');
+                hindiButton.classList.remove('language-active');
+            }
+            
+            function switchToHindi() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'block';
+                });
+                enButton.classList.remove('language-active');
+                hindiButton.classList.add('language-active');
+            }
+            
+            enButton.addEventListener('click', switchToEnglish);
+            hindiButton.addEventListener('click', switchToHindi);
+        });
+
+        // Template Generation Functions
+        function generateCeaseDesist() {
+            const name = document.getElementById('cdName').value || '[Your Name]';
+            const address = document.getElementById('cdAddress').value || '[Your Address]';
+            const bank = document.getElementById('cdBank').value || '[Bank/NBFC Name]';
+            const account = document.getElementById('cdAccount').value || '[Account/Loan Number]';
+            const details = document.getElementById('cdDetails').value || '[Details of harassment]';
+            const date = new Date().toLocaleDateString();
+            
+            const template = `
+Date: ${date}
+
+To,
+The Recovery Manager,
+${bank}
+
+Subject: CEASE AND DESIST NOTICE for harassment in relation to Account/Loan No. ${account}
+
+Dear Sir/Madam,
+
+I, ${name}, residing at ${address}, am writing to bring to your attention the persistent harassment I have been facing from your recovery agents in relation to the above-mentioned account.
+
+${details}
+
+I would like to remind you that as per RBI guidelines and the Fair Practices Code, recovery agents are prohibited from:
+1. Using abusive language or making threats
+2. Calling outside permitted hours (8 AM to 7 PM)
+3. Disclosing my debt to third parties
+4. Using intimidation tactics
+
+This harassment has caused me significant mental distress and anxiety. I hereby demand that you immediately:
+1. Cease all harassment and unethical recovery practices
+2. Ensure all communication follows RBI guidelines
+3. Provide written confirmation of these actions
+
+If the harassment does not stop immediately, I will be compelled to file formal complaints with the RBI Banking Ombudsman, consumer forums, and other appropriate authorities.
+
+I expect your prompt action in this matter.
+
+Sincerely,
+${name}
+${address}
+            `;
+            
+            document.getElementById('ceaseDesistTemplate').textContent = template;
+        }
+
+        function generateBankComplaint() {
+            const name = document.getElementById('bcName').value || '[Your Name]';
+            const manager = document.getElementById('bcManager').value || '[Branch Manager Name]';
+            const address = document.getElementById('bcAddress').value || '[Bank Branch Address]';
+            const account = document.getElementById('bcAccount').value || '[Account/Loan Number]';
+            const incident = document.getElementById('bcIncident').value || '[Incident Details]';
+            const incidentDate = document.getElementById('bcDate').value || '[Date of Incident]';
+            const date = new Date().toLocaleDateString();
+            
+            const template = `
+Date: ${date}
+
+To,
+${manager},
+Branch Manager,
+${address}
+
+Subject: Complaint against harassment by recovery agents for Account/Loan No. ${account}
+
+Dear Mr./Ms. ${manager},
+
+I am writing to formally complain about the unethical and harassing behavior of recovery agents assigned to my account (${account}) with your bank.
+
+On ${incidentDate}, I experienced the following incident:
+${incident}
+
+This behavior violates the RBI's Fair Practices Code for lenders and constitutes harassment under Indian law. The recovery agents have exceeded their authority and have caused me significant mental distress.
+
+I request that you:
+1. Immediately stop all harassment by your recovery agents
+2. Investigate this matter and take appropriate disciplinary action
+3. Provide me with written confirmation of the steps taken
+4. Ensure all future communications comply with RBI guidelines
+
+If I do not receive a satisfactory response within 15 days, I will be compelled to escalate this matter to the RBI Banking Ombudsman and other appropriate authorities.
+
+I expect your prompt attention to this serious matter.
+
+Sincerely,
+${name}
+            `;
+            
+            document.getElementById('bankComplaintTemplate').textContent = template;
+        }
+
+        function generateRBIComplaint() {
+            const name = document.getElementById('rbiName').value || '[Your Name]';
+            const contact = document.getElementById('rbiContact').value || '[Your Contact Information]';
+            const bank = document.getElementById('rbiBank').value || '[Bank Name & Branch]';
+            const previous = document.getElementById('rbiPrevious').value || '[Details of previous complaints]';
+            const summary = document.getElementById('rbiSummary').value || '[Summary of harassment]';
+            const date = new Date().toLocaleDateString();
+            
+            const template = `
+Date: ${date}
+
+To,
+The Banking Ombudsman,
+Reserve Bank of India
+
+Subject: Complaint against ${bank} for harassment by recovery agents
+
+Dear Sir/Madam,
+
+I, ${name}, wish to file a formal complaint against ${bank} for allowing their recovery agents to engage in harassment and unethical practices.
+
+My contact details:
+${contact}
+
+Summary of harassment:
+${summary}
+
+Previous actions taken:
+I have previously complained to the bank about this matter:
+${previous}
+
+However, the bank has failed to take appropriate action to stop the harassment.
+
+The recovery agents have violated RBI guidelines by:
+1. Using abusive language and threats
+2. Contacting me outside permitted hours
+3. Disclosing my debt to third parties without consent
+4. Using intimidation tactics
+
+I request your office to:
+1. Investigate this matter
+2. Direct the bank to immediately stop all harassment
+3. Take appropriate action against the bank for violating RBI guidelines
+4. Provide me with compensation for the mental harassment suffered
+
+I have attached supporting documents including call records, messages, and copies of previous complaints.
+
+Thank you for your attention to this matter.
+
+Sincerely,
+${name}
+            `;
+            
+            document.getElementById('rbiComplaintTemplate').textContent = template;
+        }
+
+        function resetForm(formType) {
+            if (formType === 'ceaseDesist') {
+                document.getElementById('cdName').value = '';
+                document.getElementById('cdAddress').value = '';
+                document.getElementById('cdBank').value = '';
+                document.getElementById('cdAccount').value = '';
+                document.getElementById('cdDetails').value = '';
+                document.getElementById('ceaseDesistTemplate').textContent = 'Your generated template will appear here after filling the form.';
+            } else if (formType === 'bankComplaint') {
+                document.getElementById('bcName').value = '';
+                document.getElementById('bcManager').value = '';
+                document.getElementById('bcAddress').value = '';
+                document.getElementById('bcAccount').value = '';
+                document.getElementById('bcIncident').value = '';
+                document.getElementById('bcDate').value = '';
+                document.getElementById('bankComplaintTemplate').textContent = 'Your generated template will appear here after filling the form.';
+            } else if (formType === 'rbiComplaint') {
+                document.getElementById('rbiName').value = '';
+                document.getElementById('rbiContact').value = '';
+                document.getElementById('rbiBank').value = '';
+                document.getElementById('rbiPrevious').value = '';
+                document.getElementById('rbiSummary').value = '';
+                document.getElementById('rbiComplaintTemplate').textContent = 'Your generated template will appear here after filling the form.';
+            }
+        }
+
+        function copyToClipboard(elementId) {
+            const text = document.getElementById(elementId).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Template copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function downloadTemplate(elementId, filename) {
+            const text = document.getElementById(elementId).textContent;
+            const blob = new Blob([text], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            setTimeout(() => {
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            }, 0);
+        }
+    </script>
+</body>
+</html>

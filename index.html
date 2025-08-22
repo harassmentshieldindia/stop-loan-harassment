@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Harassment Help Center - Support for Victims</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #3a6ea5;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-dark: #343a40;
+            --text-light: #6c757d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        .hindi {
+            font-family: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(58, 110, 165, 0.9), rgba(58, 110, 165, 0.8)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%233a6ea5" opacity="0.2"/><path d="M0 0L100 100" stroke="white" stroke-width="2" opacity="0.1"/><path d="M100 0L0 100" stroke="white" stroke-width="2" opacity="0.1"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            margin-top: 56px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .service-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .email-help-section {
+            background-color: var(--secondary-color);
+            padding: 80px 0;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+            height: 100%;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            width: 30px;
+            color: var(--primary-color);
+        }
+        
+        .language-switcher {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+        }
+        
+        .language-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-primary:hover {
+            background-color: #2c5282;
+            border-color: #2c5282;
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Recovery Harassment Help</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#email-help">Email Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <span class="language-switcher language-active">EN</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="language-switcher hindi">हिंदी</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1>Fighting Recovery Harassment Together</h1>
+                    <p class="lead">We provide support, guidance, and resources to victims of aggressive recovery practices by banks and NBFCs.</p>
+                    <p class="hindi mt-3" style="display: none;">हम बैंकों और एनबीएफसी द्वारा आक्रामक वसूली प्रथाओं के शिकार लोगों को सहायता, मार्गदर्शन और संसाधन प्रदान करते हैं।</p>
+                    <div class="disclaimer">
+                        <strong>Disclaimer:</strong> I am not a legal professional but a victim of harassment like you. This initiative runs on a donation model to help maximum people.
+                    </div>
+                    <div class="mt-4">
+                        <a href="#services" class="btn btn-light btn-lg me-2">How We Help</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='350' viewBox='0 0 500 350'><rect width='500' height='350' fill='%23ffffff' opacity='0.2' rx='20' ry='20'/><circle cx='250' cy='150' r='80' fill='%23ffffff' opacity='0.4'/><path d='M200 250 L300 250 L250 300 Z' fill='%23ffffff' opacity='0.4'/></svg>" alt="Support Community" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="section-title">How We Can Help</h2>
+                    <p>We offer various services to support victims of recovery harassment. All our services are free of charge, as we operate on a donation-based model.</p>
+                    <p class="hindi" style="display: none;">हम वसूली उत्पीड़न के शिकार लोगों का समर्थन करने के लिए विभिन्न सेवाएं प्रदान करते हैं। हमारी सभी सेवाएं निःशुल्क हैं, क्योंकि हम दान-आधारित मॉडल पर काम करते हैं।</p>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>Guidance & Support</h4>
+                            <p>Step-by-step guidance on how to deal with harassment from recovery agents.</p>
+                            <p class="hindi" style="display: none;">वसूली एजेंटों से उत्पीड़न से निपटने के तरीके पर चरण-दर-चरण मार्गदर्शन।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4>Email Templates</h4>
+                            <p>Ready-to-use email templates to communicate with banks and regulatory authorities.</p>
+                            <p class="hindi" style="display: none;">बैंकों और नियामक प्राधिकरणों के साथ संवाद करने के लिए तैयार-से-उपयोग ईमेल टेम्पलेट्स।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <h4>Legal Rights Information</h4>
+                            <p>Understand your legal rights and the limitations of recovery agents.</p>
+                            <p class="hindi" style="display: none;">अपने कानूनी अधिकारों और वसूली एजेंटों की सीमाओं को समझें।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Community Support</h4>
+                            <p>Connect with other victims and share experiences in a supportive environment.</p>
+                            <p class="hindi" style="display: none;">एक सहायक वातावरण में अन्य पीड़ितों से जुड़ें और अनुभव साझा करें।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h4>Educational Resources</h4>
+                            <p>Access articles, guides, and FAQs about dealing with recovery harassment.</p>
+                            <p class="hindi" style="display: none;">वसूली उत्पीड़न से निपटने के बारे में लेख, मार्गदर्शक और अक्सर पूछे जाने वाले प्रश्नों तक पहुंचें।</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center p-4">
+                            <div class="service-icon">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <h4>Professional Referrals</h4>
+                            <p>Get connected with qualified legal professionals who can help with your case.</p>
+                            <p class="hindi" style="display: none;">योग्य कानूनी पेशेवरों से जुड़ें जो आपके मामले में मदद कर सकते हैं।</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Help Section -->
+    <section id="email-help" class="email-help-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Need Immediate Email Assistance?</h2>
+                    <p>We can help you draft professional emails to send to banks, NBFCs, and regulatory authorities to address harassment issues.</p>
+                    <p class="hindi" style="display: none;">हम आपको बैंकों, एनबीएफसी और नियामक प्राधिकरणों को उत्पीड़न के मुद्दों को संबोधित करने के लिए भेजने हेतु पेशेवर ईमेल तैयार करने में मदद कर सकते हैं।</p>
+                    
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-white rounded-circle p-3 shadow-sm me-3">
+                                <i class="fas fa-edit text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Custom Email Drafting</h5>
+                                <p class="mb-0">We help you create effective communication</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-white rounded-circle p-3 shadow-sm me-3">
+                                <i class="fas fa-file-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Template Library</h5>
+                                <p class="mb-0">Access our collection of pre-made templates</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center">
+                            <div class="bg-white rounded-circle p-3 shadow-sm me-3">
+                                <i class="fas fa-shield-alt text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0">Legal Compliance</h5>
+                                <p class="mb-0">Emails drafted within legal frameworks</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-primary">Request Email Help</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4>Email Assistance Form</h4>
+                        <p class="text-muted">Fill out this form and we'll help you draft an appropriate email</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="issue" class="form-label">Describe Your Issue</label>
+                                <textarea class="form-control" id="issue" rows="4" placeholder="Briefly describe the harassment you're facing"></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="entity" class="form-label">Bank/NBFC Name</label>
+                                <input type="text" class="form-control" id="entity" placeholder="Name of the bank or NBFC">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary w-100">Get Email Assistance</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section id="blog" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center">Latest from Our Blog</h2>
+            <p class="text-center mb-5">Educational articles and resources to help you understand and fight recovery harassment</p>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%233a6ea5'/><circle cx='200' cy='100' r='50' fill='%23ffffff' opacity='0.6'/></svg>" class="card-img-top" alt="Blog post">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1"></i> October 15, 2023</span>
+                            <h5 class="card-title mt-2">Know Your Rights Against Recovery Agents</h5>
+                            <p class="card-text">Understanding what recovery agents can and cannot do when collecting debts.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23ff6b6b'/><rect x='150' y='75' width='100' height='50' fill='%23ffffff' opacity='0.6'/></svg>" class="card-img-top" alt="Blog post">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1"></i> October 8, 2023</span>
+                            <h5 class="card-title mt-2">How to Document Harassment Incidents</h5>
+                            <p class="card-text">A step-by-step guide to properly document recovery harassment for legal purposes.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card blog-card">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'><rect width='400' height='200' fill='%23f8f9fa'/><path d='M100 100 L300 100 L200 50 Z' fill='%233a6ea5' opacity='0.6'/></svg>" class="card-img-top" alt="Blog post">
+                        <div class="card-body">
+                            <span class="blog-date"><i class="far fa-calendar me-1"></i> October 1, 2023</span>
+                            <h5 class="card-title mt-2">Effective Communication with Banks</h5>
+                            <p class="card-text">Learn how to professionally communicate with banks to resolve issues without harassment.</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title text-center">Contact Us</h2>
+            <p class="text-center mb-5">Reach out to us for support or questions about recovery harassment</p>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <span>help@recoveryharassment.org</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                <span>+91 XXXXXXXXXX</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Based in India, helping victims nationwide</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-clock"></i>
+                                <span>Response within 24-48 hours</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="mt-4">
+                            <h5>Follow Us</h5>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <div class="bg-white p-4 rounded shadow-sm h-100">
+                        <h4 class="mb-4">Support Our Mission</h4>
+                        <p>We operate on a donation-based model to help as many victims as possible. Your support helps us:</p>
+                        
+                        <ul>
+                            <li>Maintain and improve our platform</li>
+                            <li>Reach more victims of recovery harassment</li>
+                            <li>Rope in qualified legal professionals</li>
+                            <li>Create more educational resources</li>
+                        </ul>
+                        
+                        <div class="mt-4">
+                            <a href="#" class="btn btn-primary me-2">Make a Donation</a>
+                            <a href="#" class="btn btn-outline-primary">Volunteer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h4>Recovery Harassment Help Center</h4>
+                    <p>A community-driven initiative to support victims of recovery harassment by banks and NBFCs.</p>
+                    <p>Not affiliated with any financial institution.</p>
+                </div>
+                
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#email-help">Email Help</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5>Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="#">Legal Rights</a></li>
+                        <li><a href="#">Email Templates</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Glossary</a></li>
+                        <li><a href="#">Regulatory Bodies</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-3 col-md-4">
+                    <h5>Legal Disclaimer</h5>
+                    <p>We are not legal professionals. The information provided here is for educational purposes only and does not constitute legal advice.</p>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-4">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <p>© 2023 Recovery Harassment Help Center. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>Made with ❤️ for victims of recovery harassment</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple language toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hindiElements = document.querySelectorAll('.hindi');
+            const enButton = document.querySelector('.language-switcher:not(.hindi)');
+            const hindiButton = document.querySelector('.language-switcher.hindi');
+            
+            function switchToEnglish() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'none';
+                });
+                enButton.classList.add('language-active');
+                hindiButton.classList.remove('language-active');
+            }
+            
+            function switchToHindi() {
+                hindiElements.forEach(el => {
+                    el.style.display = 'block';
+                });
+                enButton.classList.remove('language-active');
+                hindiButton.classList.add('language-active');
+            }
+            
+            enButton.addEventListener('click', switchToEnglish);
+            hindiButton.addEventListener('click', switchToHindi);
+        });
+    </script>
+</body>
+</html>
